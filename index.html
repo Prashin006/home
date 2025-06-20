@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashin Parikh | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #38bdf8;
+            transition: width 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #38bdf8;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        [data-aos] {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold tracking-tighter">Prashin Parikh</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <a href="#contact" class="hidden md:inline-block bg-sky-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-sky-600 transition-colors">
+                    Get in Touch
+                </a>
+                 <button id="mobile-menu-button" class="md:hidden">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/90 backdrop-blur-sm z-40 md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#about" class="mobile-nav-link text-2xl">About</a>
+            <a href="#projects" class="mobile-nav-link text-2xl">Projects</a>
+            <a href="#experience" class="mobile-nav-link text-2xl">Experience</a>
+            <a href="#skills" class="mobile-nav-link text-2xl">Skills</a>
+            <a href="#contact" class="mobile-nav-link text-2xl">Contact</a>
+        </div>
+    </div>
+
+
+    <main class="container mx-auto px-6">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center">
+            <div class="space-y-6">
+                <div class="relative w-32 h-32 md:w-40 md:h-40 mx-auto">
+                    <img src="./utilities/prashin.png" alt="Prashin Parikh" class="rounded-full object-cover w-full h-full">
+                     <span class="absolute bottom-2 right-2 block h-6 w-6 rounded-full bg-green-400 border-2 border-gray-900"></span>
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter">
+                    Hi, I'm <span class="gradient-text">Prashin Parikh</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
+                    A dedicated Software and Systems Engineer with a passion for building intelligent systems, crafting elegant code, and solving real-world problems. I turn complex challenges into scalable, efficient solutions.
+                </p>
+                <div class="flex justify-center items-center space-x-4 pt-4">
+                     <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <p class="text-green-400 font-medium">Open to new opportunities</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">About Me</h2>
+                <p class="text-slate-400 mt-2">A brief look into my journey and mindset.</p>
+            </div>
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3 space-y-6 text-slate-300 text-lg">
+                    <p>
+                        I'm a recent Computer Science graduate from <span class="text-sky-400 font-semibold">Mumbai University</span> with a specialization in Data Science (CGPA: 8.23). My journey in technology is driven by a profound curiosity and a hunger to not just learn, but to build. From developing full-stack applications to delving into the intricacies of operating systems, I'm passionate about understanding how things work from the ground up.
+                    </p>
+                    <p>
+                        My goal is holistic improvement—I believe that professional growth is deeply connected to personal well-being. I'm actively working on enhancing my focus, managing my time effectively, and maintaining a healthy work-life balance. This discipline fuels my ambition to tackle big challenges, like my current project: an <span class="text-purple-400 font-semibold">investment AI powered by Gemini</span>, which I plan to deploy as a real-world tool.
+                    </p>
+                     <p>
+                        I'm a reflective and self-aware individual, constantly seeking ways to be 1% better every day—in my code, my communication, and my character.
+                    </p>
+                </div>
+                <div class="md:col-span-2 space-y-6">
+                    <div class="glass-card p-6 rounded-xl flex items-start space-x-4">
+                        <i data-lucide="brain-circuit" class="h-8 w-8 text-purple-400 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">Deep & Curious Learner</h3>
+                            <p class="text-slate-400">Drawn to complex topics like LLMs, attention mechanisms, and system-level programming.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl flex items-start space-x-4">
+                         <i data-lucide="flame" class="h-8 w-8 text-amber-400 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">Hardworking & Ambitious</h3>
+                            <p class="text-slate-400">Proactively seeking challenges and aiming higher.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl flex items-start space-x-4">
+                         <i data-lucide="sparkles" class="h-8 w-8 text-sky-400 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">Reflective & Self-Aware</h3>
+                            <p class="text-slate-400">Focused on holistic growth, from improving discipline to enhancing communication skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Projects</h2>
+                <p class="text-slate-400 mt-2">Things I am building to solve problems and learn.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project Card 1 -->
+                <div class="glass-card p-6 rounded-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-white mb-2">Investment AI Chatbot</h3>
+                    <p class="text-slate-400 mb-4">An intelligent financial assistant leveraging Artificial Intelligence to help users track investments and gain market insights.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Work In Progress</span>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="glass-card p-6 rounded-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <a href="https://github.com/Prashin006/Simple-CRUD-API" target="_blank"><h3 class="text-xl font-bold text-white mb-2">RESTful Product API</h3></a>
+                    <p class="text-slate-400 mb-4">A robust API built with Node.js, Express, and MongoDB, following the MVC architecture. It provides full CRUD functionality for product management, emphasizing clean code and separation of concerns.</p>
+                     <div class="flex flex-wrap gap-2">
+                        <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">MVC</span> <span class="tag">REST</span>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="glass-card p-6 rounded-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <a href="https://prashinparikh.pythonanywhere.com/" target="_blank"><h3 class="text-xl font-bold text-white mb-2">E-commerce Website</h3></a>
+                    <p class="text-slate-400 mb-4">A full-stack e-commerce platform developed with Python (Flask) and a CSS (Bootstrap) front-end. It features product listings, user authentication, and a shopping cart, demonstrating end-to-end web development skills.</p>
+                     <div class="flex flex-wrap gap-2">
+                        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Bootstrap CSS</span><span class="tag">SQLite</span>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                 <div class="glass-card p-6 rounded-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-white mb-2">System-Level Utilities in C</h3>
+                    <p class="text-slate-400 mb-4">Recreated fundamental Linux utilities like `ls`, `head`, and `ps` in C. This project deepened my understanding of system calls, process management, and low-level programming concepts on UNIX-like systems.</p>
+                     <div class="flex flex-wrap gap-2">
+                        <span class="tag">C</span><span class="tag">Linux/UNIX</span><span class="tag">System Programming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 md:py-32">
+             <div class="text-center mb-12">
+                <a href="https://drive.google.com/file/d/1Hc982ZbO9zQ4LBpv_TU8dlcLaYz9qW1n/view?usp=sharing" target="_blank"><h2 class="text-3xl md:text-4xl font-bold">Experience</h2></a>
+                
+                <p class="text-slate-400 mt-2">Where I've applied my skills professionally.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                 <div class="relative pl-8 border-l-2 border-slate-700">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-sky-500 border-4 border-gray-900"></div>
+                    <p class="text-sm text-slate-400">March 2024 - September 2024</p>
+                    <h3 class="text-xl font-bold text-white mt-1">Software Engineer Intern</h3>
+                    <p class="font-semibold text-slate-300">Hirademy Technologies</p>
+                    <p class="text-slate-400 mt-2">
+                        Contributed to the development of an AI-based recruitment platform. I helped integrate AI models (OpenAI API, Gemini API and Meta-Llama model using Ollama), build RESTful APIs, and enhance the data annotation process. This experience provided me with invaluable insights into real-world product development cycles, agile methodologies, and collaborative software engineering.
+                    </p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Skills & Certifications Section -->
+        <section id="skills" class="py-20 md:py-32">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Skills & Certifications</h2>
+                <p class="text-slate-400 mt-2">My technical toolkit and credentials.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Technical Skills</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">C / C++</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">Python</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">JavaScript</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">Flask</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">Node.js (Express)</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">HTML & CSS</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">SQL (MySQL, PostgreSQL, SQLite)</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">MongoDB</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">REST APIs</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">Git & GitHub</span>
+                        <span class="bg-slate-700 p-3 rounded-lg font-medium">Linux/UNIX</span>
+                         <span class="bg-slate-700 p-3 rounded-lg font-medium">AI/ML Integration</span>
+                    </div>
+                </div>
+                <div>
+                     <h3 class="text-2xl font-bold text-white mb-6">Certifications</h3>
+                     <ul class="space-y-4">
+                        
+                        <li class="flex items-center space-x-3"><i data-lucide="award" class="h-5 w-5 text-sky-400"></i><span>Google Data Analytics Professional Certificate</span></li>
+
+                        <a href="https://drive.google.com/file/d/1OThbmjkIuthsVSowBNSwnh_ZVHGladKh/view?usp=sharing" target="_blank"><li class="flex items-center space-x-3"><i data-lucide="award" class="h-5 w-5 text-sky-400"></i><span>Postman API Fundamentals Student Expert</span></li></a>
+
+                        <a href="https://drive.google.com/file/d/183y0IHc0cB-nHoYi9sgDxMJ9DKt4szdx/view?usp=sharing" target="_blank"><li class="flex items-center space-x-3"><i data-lucide="award" class="h-5 w-5 text-sky-400"></i><span>Postman API Test Automation</span></li></a>
+                        
+                        <a href="https://drive.google.com/file/d/1vvJ-pQxCfY1gRbWt3cXqq6lQbLlhgJ92/view" target="_blank"><li class="flex items-center space-x-3"><i data-lucide="award" class="h-5 w-5 text-sky-400"></i><span>Cisco CCNAv7 (ITN, SRWE, ENSA), Cisco Cybersecurity Essentials, Python Programming Essentials </span></li></a>
+                        
+                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32">
+             <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold">Let's Connect</h2>
+                <p class="text-slate-400 mt-2 mb-8">
+                    I'm currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to say hi, feel free to reach out.
+                </p>
+                <a href="mailto:prashin.parikh.dev@gmail.com" class="inline-block text-xl md:text-2xl font-semibold gradient-text hover:brightness-125 transition">
+                    prashin.parikh.dev@gmail.com
+                </a>
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="https://www.linkedin.com/in/prashin-jignesh-parikh-44118124b/" class="text-slate-400 hover:text-sky-400 transition-colors" target="_blank"><i data-lucide="linkedin" class="h-7 w-7"></i></a>
+                    <a href="https://github.com/Prashin006" class="text-slate-400 hover:text-sky-400 transition-colors" target="_blank"><i data-lucide="github" class="h-7 w-7"></i></a>
+                    <a href="https://x.com/Prashin_108" class="text-slate-400 hover:text-sky-400 transition-colors" target="_blank"><i data-lucide="twitter" class="h-7 w-7"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 border-t border-slate-800">
+        <p class="text-slate-500">&copy; 2025 Designed & Built with ❤️ by Prashin Jignesh Parikh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-gray-900/80', 'backdrop-blur-sm', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-gray-900/80', 'backdrop-blur-sm', 'shadow-lg');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Active navigation link highlighting on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Simple scroll reveal animation
+        const aosElements = document.querySelectorAll('section > div, section > div > div');
+        const aosObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.setAttribute('data-aos', 'visible');
+                    // Optional: unobserve after revealing
+                    // aosObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        aosElements.forEach(el => {
+            aosObserver.observe(el);
+        });
+
+        // Add visible style for AOS
+        const style = document.createElement('style');
+        style.innerHTML = `
+            [data-aos="visible"] {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        `;
+        document.head.appendChild(style);
+
+    </script>
+</body>
+</html>
